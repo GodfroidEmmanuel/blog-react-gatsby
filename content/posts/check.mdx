@@ -1,0 +1,55 @@
+---
+title: Components
+date: 2019-08-06
+---
+
+### Components
+
+In this chapter, we will learn how to combine components to make the app easier to maintain. This approach allows to update and change your components without affecting the rest of the page.
+
+Stateless Example
+Our first component in the following example is App. This component is owner of Header and Content. We are creating Header and Content separately and just adding it inside JSX tree in our App component. Only App component needs to be exported.
+
+```App.jsx
+import React from 'react';
+
+class App extends React.Component {
+   render() {
+      return (
+         <div>
+            <Header/>
+            <Content/>
+         </div>
+      );
+   }
+}
+class Header extends React.Component {
+   render() {
+      return (
+         <div>
+            <h1>Header</h1>
+         </div>
+      );
+   }
+}
+class Content extends React.Component {
+   render() {
+      return (
+         <div>
+            <h2>Content</h2>
+            <p>The content text!!!</p>
+         </div>
+      );
+   }
+}
+export default App;
+```
+To be able to render this on the page, we need to import it in main.js file and call reactDOM.render(). We already did this while setting the environment.
+
+```main.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App.jsx';
+
+ReactDOM.render(<App />, document.getElementById('app'));
+```

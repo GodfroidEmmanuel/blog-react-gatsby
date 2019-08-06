@@ -1,0 +1,31 @@
+---
+title: JSX !
+date: 2019-08-06
+---
+JSX
+React uses JSX for templating instead of regular JavaScript. It is not necessary to use it, however, following are some pros that come with it.
+
+* It is faster because it performs optimization while compiling code to JavaScript.
+
+* It is also type-safe and most of the errors can be caught during compilation.
+
+* It makes it easier and faster to write templates, if you are familiar with HTML.
+
+#### Using JSX
+JSX looks like a regular HTML in most cases. We already used it in the Environment Setup chapter. Look at the code from App.jsx where we are returning div.
+
+```App.jsx
+import React from 'react';
+
+class App extends React.Component {
+   render() {
+      return (
+         <div>
+            Hello World!!!
+         </div>
+      );
+   }
+}
+export default App;
+```
+Even though it's similar to HTML, there are a couple of things we need to keep in mind when working with JSX.
